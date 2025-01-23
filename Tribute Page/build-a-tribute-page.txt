@@ -1,0 +1,79 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Tribute Page</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title">Dr.Apj Abdul Kalam</h1>
+      <div id="img-div">
+        <img
+          src="https://wallpapers.com/images/high/abdul-kalam-hd-dream-thoughts-actions-97wyfmhn59uavp10.webp"
+          alt="apj abdul kalam image"
+          id="image"
+        max-width="100%"/>
+        <div id="img-caption">
+        <p id="img-caption">
+          A.P.J. Abdul Kalam (born October 15, 1931, Rameswaram, India—died July
+          27, 2015, Shillong) was an Indian scientist and politician who played
+          a leading role in the development of India’s missile and nuclear
+          weapons programs. He was president of India from 2002 to 2007. His
+          scientific achievements and popularity gained him the epithets
+          “Missile Man” and “People’s President.”
+        </p>
+</div>
+        <pre>
+      <p id="tribute-info">
+1931: Born in Rameswaram, Tamil Nadu 
+1954: Graduated from Saint Joseph's College in Tiruchirappalli with a degree in Physics 
+1960: Graduated from Madras Institute of Technology with a degree in Aeronautical Engineering 
+1969: Transferred from the DRDO to the ISRO 
+1980: India launched its first satellite, Rohini, into near-earth orbit using the SLV-III, which Kalam developed 
+1980s–1990s: Led the Integrated Guided Missile Development Programme, which developed the AGNI and PRITHVI missiles 
+1992–1999: Served as the Chief Scientific Advisor to the Prime Minister and Secretary of the DRDO 
+1998: Served as the chief project coordinator for India's Pokhran II nuclear tests 
+1999–2001: Served as the Principal Scientific Advisor to the Government of India 
+2002–2007: Served as the 11th president of India 
+2015: Passed away after collapsing during a lecture at the Indian Institute of Management in Shillong 
+      </p>
+    </pre>
+        <a
+          href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam"
+          id="tribute-link"
+          target="_blank"
+          >Know More</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+
+#img-div {
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#image {
+  max-width: 100%;
+  height: auto; 
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+
+** end of undefined **
+

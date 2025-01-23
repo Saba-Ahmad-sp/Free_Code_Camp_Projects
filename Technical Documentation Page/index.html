@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #navbar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* For larger screens (laptops, desktops) */
+  @media (min-width: 768px) {
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main-doc {
+      margin-left: 260px;
+      padding: 20px;
+    }
+  }
+
+  /* For smaller screens (smartphones) */
+  @media (max-width: 767px) {
+    #navbar {
+      position: static;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    #main-doc {
+      margin: 0;
+      padding: 20px;
+    }
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h2>Web-Development Topics</h2></header>
+      <a href="#Html" class="nav-link">Html</a>
+      <a href="#Css" class="nav-link">Css</a>
+      <a href="#JavaScript" class="nav-link">JavaScript</a>
+      <a href="#Python" class="nav-link">Python</a>
+      <a href="#React" class="nav-link">React</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Html">
+        <header><h2>Html</h2></header>
+        <p>
+          Hypertext Markup Language (HTML) is the standard markup language[a]
+          for documents designed to be displayed in a web browser. It defines
+          the content and structure of web content.
+        </p>
+        <p>
+          HTML elements are the building blocks of HTML pages. With HTML
+          constructs, images and other objects such as interactive forms may be
+          embedded into the rendered page. HTML provides a means to create
+          structured documents by denoting structural semantics for text such as
+          headings, paragraphs, lists, links, quotes, and other items. HTML
+          elements are delineated by tags, written using angle brackets.
+        </p>
+        <code>some Html tags are: </code>
+        <ul>
+          <li>paragraph tag (p)</li>
+          <li>heading tag (h1,h2...h6)</li>
+          <li>image tag (img), etc</li>
+          <li>break tag (br)</li>
+          <li>form tag (form)</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Css">
+        <header><h2>CSS</h2></header>
+        <p>
+          CSS stands for Cascading Style Sheets, a computer language that
+          controls how web pages look. It's used to style and structure HTML or
+          XML documents, such as web pages.
+        </p>
+        <code>What does CSS do? </code>
+        <p>
+          Changes the font, color, size, and spacing of content Adds animations
+          and other decorative features Splits content into columns Describes
+          how elements should be rendered on screen, on paper, in speech, or on
+          other media
+        </p>
+        <code style="color: red"
+          >This is Example of css color:red property.</code
+        >
+      </section>
+      <section class="main-section" id="JavaScript">
+        <header><h2>JavaScript</h2></header>
+        <p>
+          JavaScript (JS) is a programming language that allows developers to
+          create interactive web pages. It's one of the core technologies of the
+          World Wide Web.
+        </p>
+        <code>What can JavaScript do?</code>
+        <p>
+          Create interactive content JavaScript can add interactivity to web
+          pages, such as animations, pop-up menus, and clickable buttons.
+          Control multimedia JavaScript can control multimedia, such as video
+          jukeboxes and webcam streams. Store and retrieve data JavaScript can
+          store and retrieve data on a user's device, and send that data to a
+          server for analytics or personalization. Build games JavaScript can be
+          used to build games, especially when combined with HTML5 and an API
+          like WebGL.
+        </p>
+      </section>
+      <section class="main-section" id="Python">
+        <header><h2>Python</h2></header>
+        <p>
+          Python is a high-level programming language that is used to develop
+          websites, software, and data analysis tools. It is known for its
+          readability and ease of use.
+        </p>
+        <code>What it's used for</code>
+        <p>
+          Web development: Python can be used to build websites Data analysis:
+          Python can be used to analyze data and generate visualizations
+          Software development: Python can be used to develop software Task
+          automation: Python can be used to automate tasks Everyday tasks:
+          Python can be used for everyday tasks like organizing finances
+        </p>
+      </section>
+      <section class="main-section" id="React">
+        <header><h2>React</h2></header>
+        <p>
+          React (also known as React.js or ReactJS) is a free and open-source
+          front-end JavaScript library[5][6] that aims to make building user
+          interfaces based on components more "seamless".[5] It is maintained by
+          Meta (formerly Facebook) and a community of individual developers and
+          companies
+        </p>
+        <p>
+          React can be used to develop single-page, mobile, or server-rendered
+          applications with frameworks like Next.js and Remix[a]. Because React
+          is only concerned with the user interface and rendering components to
+          the DOM, React applications often rely on libraries for routing and
+          other client-side functionality.[11][12] A key advantage of React is
+          that it only re-renders those parts of the page that have changed,
+          avoiding unnecessary re-rendering of unchanged DOM elements.
+        </p>
+        <code>Key Features:</code>
+        <pre>
+  <p>
+  Component-Based: React applications are built with components, which are small, reusable pieces of code that manage their own state and rendering.
+  
+  Declarative: You describe what you want your UI to look like, and React takes care of updating it efficiently.
+  
+  Virtual DOM: React uses a virtual representation of the DOM to optimize updates, making it performant even for complex applications.
+  
+  JSX: JSX is a syntax extension that allows you to write HTML-like structures within your JavaScript code, making it easier to define UI components.
+  </p>
+          </pre>
+      </section>
+    </main>
+  </body>
+</html>
