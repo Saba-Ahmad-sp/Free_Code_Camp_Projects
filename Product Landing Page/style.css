@@ -1,5 +1,90 @@
-.nav-link{
+body {
+  background-color: #eee;
+}
+
+.nav-link {
   text-decoration: none;
   color: #333;
   padding: 10px;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 32px;
+}
+
+#nav-bar {
+  font-weight: 600;
+}
+
+#form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#submit {
+  background-color: grey;
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+}
+
+.about h2,
+.about p {
+  width: 70%; 
+}
+
+.product-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#buy-now {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#buy-now button {
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #f1c40f;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .about h2,
+  .about p {
+    width: 90%;
+  }
+  .product-video{
+    margin-top: 20px;
+  }
 }

@@ -3,17 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Heads Up</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header id="header">
-      <img src="https://img.freepik.com/premium-vector/vector-headphones-icon-black-symbol-silhouette-isolated_997622-2662.jpg" alt="logo image" id="header-img" width="30px"/>
+      <div class="logo">
+        <img
+        src="https://img.freepik.com/premium-vector/vector-headphones-icon-black-symbol-silhouette-isolated_997622-2662.jpg"
+        alt="logo image"
+        id="header-img"
+        width="30px"
+      />
+      <h2>Heads Up</h2>
+      </div>
       <nav id="nav-bar">
-        <a href="" class="nav-link">Home</a>
-        <a href="" class="nav-link">About</a>
-        <a href="" class="nav-link">Contact us</a>
+        <a href="#header" class="nav-link">Home</a>
+        <a href="#video" class="nav-link">About</a>
+        <a href="#buy-now" class="nav-link">Buy Now</a>
       </nav>
     </header>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+      <input type="submit" id="submit" value="Get Now" />
+    </form>
+    <div class="about">
+      <h2>Premium Quality</h2>
+      <p>
+        Escape the Noise, Find Clarity. Make Every Moment a Masterpiece.
+        Designed for Ultimate Sound Clarity.
+      </p>
+      <h2>Fast Delivery</h2>
+      <p>
+        Delivering Excellence, One Package at a Time. Your Parcel, Our Priority.
+        Swift and Safe Delivery Services. Navigating Miles, Delivering Smiles.
+        On-Time Delivery, Every Time
+      </p>
+      <h2>Cost Effective</h2>
+      <p>
+        Unbeatable Value: High-quality headphones at a fraction of the price.
+        Affordable Excellence: Premium sound made budget-friendly. Low Price,
+        High Performance: Experience top-tier audio without the high cost.
+      </p>
+    </div>
+    <div class="product-video">
+      <iframe
+      id="video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/VGaV_YJhWqo?si=fmj9U7g9Jr7MdK4B"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    </div>
+    <div id="buy-now">
+      <h2>Rs.599</h2>
+      <button>Buy Now</button>
+    </div>
   </body>
 </html>
