@@ -1,0 +1,182 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heads Up</title>
+   <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img
+        src="https://img.freepik.com/premium-vector/vector-headphones-icon-black-symbol-silhouette-isolated_997622-2662.jpg"
+        alt="logo image"
+        id="header-img"
+        width="30px"
+      />
+      <h2>Heads Up</h2>
+      </div>
+      <nav id="nav-bar">
+        <a href="#header" class="nav-link">Home</a>
+        <a href="#video" class="nav-link">About</a>
+        <a href="#buy-now" class="nav-link">Buy Now</a>
+      </nav>
+    </header>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+      <input type="submit" id="submit" value="Get Now" />
+    </form>
+    <div class="about">
+      <h2>Premium Quality</h2>
+      <p>
+        Escape the Noise, Find Clarity. Make Every Moment a Masterpiece.
+        Designed for Ultimate Sound Clarity.
+      </p>
+      <h2>Fast Delivery</h2>
+      <p>
+        Delivering Excellence, One Package at a Time. Your Parcel, Our Priority.
+        Swift and Safe Delivery Services. Navigating Miles, Delivering Smiles.
+        On-Time Delivery, Every Time
+      </p>
+      <h2>Cost Effective</h2>
+      <p>
+        Unbeatable Value: High-quality headphones at a fraction of the price.
+        Affordable Excellence: Premium sound made budget-friendly. Low Price,
+        High Performance: Experience top-tier audio without the high cost.
+      </p>
+    </div>
+    <div class="product-video">
+      <iframe
+      id="video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/VGaV_YJhWqo?si=fmj9U7g9Jr7MdK4B"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    </div>
+    <div id="buy-now">
+      <h2>Rs.599</h2>
+      <button>Buy Now</button>
+    </div>
+  </body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+  background-color: #eee;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 97%;
+  background-color: white; 
+  border-radius: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 32px;
+}
+
+#nav-bar {
+  font-weight: 600;
+}
+
+#form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#submit {
+  background-color: grey;
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+}
+
+.about h2,
+.about p {
+  width: 70%; 
+}
+
+.product-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#buy-now {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#buy-now button {
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #f1c40f;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .about h2,
+  .about p {
+    width: 90%;
+  }
+  .product-video{
+    margin-top: 20px;
+  }
+  
+}
+
+
+** end of undefined **
+
