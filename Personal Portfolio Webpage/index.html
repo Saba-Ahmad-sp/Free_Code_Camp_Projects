@@ -10,27 +10,54 @@
     <nav id="navbar">
       <a href="#welcome-section">Home</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact-form">Contact</a>
     </nav>
     <section id="welcome-section">
-      <h1>Welcome TO My Portfolio</h1>
-      <div class="profile">
-        <div class="profile-title">
-          <h2>Saba Ahmad</h2>
-          <h3>Front-End Developer</h3>
-        </div>
-        <div class="profile-img">
-          <img src="./profile.jpg" alt="Profile image" width="80px" />
-          <a href="" target="_blank">Visit my Profile</a>
-        </div>
+      <h1>
+        Hey Welcome to my Portfolio <br />
+        I am <span class="name"> Saba Ahmad </span>, Front-End Web Developer
+      </h1>
+      <div class="profile-img">
+        <img src="./profile.jpg" alt="Profile image" />
+        <a href="https://github.com/Saba-Ahmad-sp" target="_blank"><i>Click Here to visit my Profile</i></a>
       </div>
     </section>
     <section id="projects">
-      <h2 class="project-tile">Project title</h2>
-      <a href="">Product Landing Page</a>
+      <h2 class="project-tile"><a href="#project-main">Browse for Projects</h2></a>
+      <!-- <span class="down-arrow">↓</span> -->
+      <div id="project-main" class="project-cards">
+        <span>
+          <img src="./Skill Online.png" alt="skill online image">
+          <a class="project-link" href="https://skillonline-s-ahmad.netlify.app/">Skill Online Project</a>
+        </span>
+        <span>
+          <img src="./Todo List.png" alt="todo list image">
+          <a class="project-link" href="https://todo-list-s-ahmad.netlify.app/">Todo List Project</a>
+        </span>
+        <span>
+          <img src="./Pokemon cards.png" alt="pokemon cards image">
+          <a class="project-link" href="https://pokemon-s-ahmad.netlify.app/">Pokemon Cards Project</a>
+        </span>
+        <span>
+          <img src="./Edutech.png" alt="edutech image">
+          <a class="project-link" href="https://edutech-s-ahmad.netlify.app/">Edutech Project</a>
+        </span>
+      </div>
     </section>
-    <section id="contact">
-      <h2>Contact me</h2>
-    </section>
+      <footer>
+        
+        <div class="form-container">
+          <h2>Contact Me</h2>
+          <form id="contact-form" action="#">
+          <textarea rows="5" 
+                  cols="50" 
+                  name="contact">Share Your Thoughts!</textarea>
+        <label for="email">Enter Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter Your Email">
+        <button type="submit">Submit</button>
+        </form>
+        </div>
+        
+      </footer>
   </body>
 </html>

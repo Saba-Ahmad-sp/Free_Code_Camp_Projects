@@ -1,3 +1,73 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#welcome-section">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact-form">Contact</a>
+    </nav>
+    <section id="welcome-section">
+      <h1>
+        Hey Welcome to my Portfolio <br />
+        I am <span class="name"> Saba Ahmad </span>, Front-End Web Developer
+      </h1>
+      <div class="profile-img">
+        <img src="./profile.jpg" alt="Profile image" />
+        <a id="profile-link" href="https://github.com/Saba-Ahmad-sp" target="_blank"><i>Click Here to visit my Profile</i></a>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="project-tile"><a href="#project-main">Browse for Projects</h2></a>
+      <div id="project-main" class="project-cards">
+        <span>
+          <img src="./Skill Online.png" alt="skill online image">
+          <a class="project-link" href="https://skillonline-s-ahmad.netlify.app/">Skill Online Project</a>
+        </span>
+        <span>
+          <img src="./Todo List.png" alt="todo list image">
+          <a class="project-link" href="https://todo-list-s-ahmad.netlify.app/">Todo List Project</a>
+        </span>
+        <span>
+          <img src="./Pokemon cards.png" alt="pokemon cards image">
+          <a class="project-link" href="https://pokemon-s-ahmad.netlify.app/">Pokemon Cards Project</a>
+        </span>
+        <span>
+          <img src="./Edutech.png" alt="edutech image">
+          <a class="project-link" href="https://edutech-s-ahmad.netlify.app/">Edutech Project</a>
+        </span>
+      </div>
+    </section>
+      <footer>
+        
+        <div class="form-container">
+          <h2>Contact Me</h2>
+          <form id="contact-form" action="#">
+          <textarea rows="5" 
+                  cols="50" 
+                  name="contact">Share Your Thoughts!</textarea>
+        <label for="email">Enter Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter Your Email">
+        <button type="submit">Submit</button>
+        </form>
+        </div>
+        
+      </footer>
+  </body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,17 +81,14 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-
   z-index: 1000;
   display: flex;
-
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
   padding: 20px;
   margin-bottom: 20px;
-  /* border-bottom: 2px solid black ; */
   background-color: #3E5879;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -277,3 +344,7 @@ button:hover {
   margin-bottom: 10px;
 }
 }
+
+
+** end of undefined **
+
