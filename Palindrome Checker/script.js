@@ -22,4 +22,5 @@ button.addEventListener('click', () => {
   else{
     result.textContent = `${text} is not a palindrome.`;
   }
+
 });
