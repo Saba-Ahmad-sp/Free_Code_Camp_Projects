@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #B5A8D5;
+}
+
+.container{
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container > h1{
+  margin-bottom: 40px;
+  color: #211C84;
+  word-spacing: 2px;
+  font-size: 2.4rem;
+}
+.inner-container{
+  background-color: antiquewhite;
+  height: 25rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+.buttons-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 12px;
+}
+.btn{
+  padding: 4px 8px;
+  width: 49%;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn:hover{
+  background-color: aquamarine;
+}
+.btn:active{
+  background-color: rgb(212, 212, 212);
+}
+.inpu-output-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.input{
+  margin-block: 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  width: 16rem;
+  height: 2rem;
+  padding: 2px 8px;
+  font-size: 18px;
+}
+.input-label{
+  font-size: 1.3rem;
+  color: #4D55CC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.result{
+  font-size: 1.3rem;
+  color: #7A73D1;
+  margin: 2px 8px;
+}
