@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #205781;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+  text-align: center;
+}
+.container{
+  margin-top: 1.2rem;
+  background-color: #F6F8D5;
+  border-radius: 8px;
+  width: 325px;
+  height: 590px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.search-input-label{
+  font-size: 16px;
+  text-align: center;
+}
+.input-inner-container{
+  margin-top: 10px;
+}
+#search-input{
+  width: 12rem;
+  height: 2rem;
+  padding-left: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+#search-button{
+  padding: 7px 10px;
+  color: white;
+  background-color: #4F959D;
+  border-radius: 15px;
+  border: none;
+  transition: 0.3s;
+}
+#search-btn:hover{
+  background-color: #98D2C0;
+  cursor: pointer;
+}
+.output-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 72vh;
+}
+.top-container{
+  width: 300px;
+  height: 250px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.name-and-id{
+  height: 28px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  padding: 3px 0px 0px 4px;
+  margin-bottom: 5px;
+}
+.size{
+  height: 22px;
+  padding: 3px 4px;
+  font-size: 0.85rem;
+}
+.sprite-container{
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9.5rem;
+}
+.types{
+  padding: 3px 4px;
+  min-height: 30px;display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.types>span{
+  border-radius: 5px;
+  background-color: #98D2C0;
+  font-size: 12px;
+  font-style: none;
+  text-align: center;
+  padding: 3px 4px;
+}
+.bottom-container{
+  margin-top: 5px;
+  width: 290px;
+  height: 250px;
+}
+table{
+  background-color: #4F959D;
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+th, td{
+  text-align: center;
+  border: 5px solid #F6F8D5;
+  padding: 4px ;
+}
