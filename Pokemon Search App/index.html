@@ -7,7 +7,66 @@
     <title>Pokemon Search</title>
   </head>
   <body>
-    
+    <main>
+      <h1>Pokemon Search App</h1>
+      <div class="container">
+        <form role="search" id="search-form">
+          <label class="search-input-label" for="search-input"
+            >Search for Pokemon Name or ID:</label
+          >
+          <div class="input-inner-container">
+            <input type="text" id="search-input" required/>
+            <button id="search-button">Search</button>
+          </div>
+        </form>
+        <div class="output-container">
+          <div class="top-container">
+            <div class="name-and-id">
+              <span id="pokemon-name"></span>
+              <span id="pokemon-id"></span>
+            </div>
+            <div class="size">
+              <span id="weight"></span>
+              <span id="height"></span>
+            </div>
+            <div class="sprite-container" id="sprite-container"></div>
+            <div class="types" id="types"></div>
+          </div>
+          <div class="bottom-container">
+            <table>
+              <tr>
+                <th>Base</th>
+                <th>Stats</th>
+              </tr>
+              <tr>
+                <td>HP:</td>
+                <td id="hp"></td>
+              </tr>
+              <tr>
+                <td>Attack:</td>
+                <td id="attack"></td>
+              </tr>
+              <tr>
+                <td>Defence:</td>
+                <td id="defense"></td>
+              </tr>
+              <tr>
+                <td>Sp. Attack:</td>
+                <td id="special-attack"></td>
+              </tr>
+              <tr>
+                <td>Sp. Defence</td>
+                <td id="special-defense"></td>
+              </tr>
+              <tr>
+                <td>Speed:</td>
+                <td id="speed"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
