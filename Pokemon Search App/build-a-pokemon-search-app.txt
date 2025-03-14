@@ -1,0 +1,275 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Pokemon Search</title>
+  </head>
+  <body>
+    <main>
+      <h1>Pokemon Search App</h1>
+      <div class="container">
+        <form role="search" id="search-form">
+          <label class="search-input-label" for="search-input"
+            >Search for Pokemon Name or ID:</label
+          >
+          <div class="input-inner-container">
+            <input type="text" id="search-input" required />
+            <button id="search-button">Search</button>
+          </div>
+        </form>
+        <div class="output-container">
+          <div class="top-container">
+            <div class="name-and-id">
+              <span id="pokemon-name"></span>
+              <span id="pokemon-id"></span>
+            </div>
+            <div class="size">
+              <span id="weight"></span>
+              <span id="height"></span>
+            </div>
+            <div class="sprite-container" id="sprite-container"></div>
+            <div class="types" id="types">
+            </div>
+          </div>
+          <div class="bottom-container">
+            <table>
+              <tr>
+                <th>Base</th>
+                <th>Stats</th>
+              </tr>
+              <tr>
+                <td>HP:</td>
+                <td id="hp"></td>
+              </tr>
+              <tr>
+                <td>Attack:</td>
+                <td id="attack"></td>
+              </tr>
+              <tr>
+                <td>Defence:</td>
+                <td id="defense"></td>
+              </tr>
+              <tr>
+                <td>Sp. Attack:</td>
+                <td id="special-attack"></td>
+              </tr>
+              <tr>
+                <td>Sp. Defence</td>
+                <td id="special-defense"></td>
+              </tr>
+              <tr>
+                <td>Speed:</td>
+                <td id="speed"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+const input = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-button");
+const nameEl = document.getElementById("pokemon-name");
+const idEl = document.getElementById("pokemon-id");
+const weightEl = document.getElementById("weight");
+const heightEl = document.getElementById("height");
+const spriteContainer = document.getElementById("sprite-container");
+const typesEl = document.getElementById("types");
+const hpEl = document.getElementById("hp");
+const attackEl = document.getElementById("attack");
+const defenceEl = document.getElementById("defense");
+const spAttackEl = document.getElementById("special-attack");
+const spDefenceEl = document.getElementById("special-defense");
+const speedEl = document.getElementById("speed");
+
+const fetchPokemon = async (pokemon) => {
+  try{
+    const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemon}`);
+    const data = await res.json();
+    displayPokemon(data)
+
+  } catch(error){
+    alert("Pokémon not found")
+  }
+}
+
+const displayPokemon = (data) => {
+  nameEl.textContent = data.name.toUpperCase();
+  idEl.textContent = `#${data.id}`;
+  weightEl.textContent = `Weight: ${data.weight}`;
+  heightEl.textContent = `Height: ${data.height}`;
+  hpEl.textContent = data.stats[0].base_stat;
+  attackEl.textContent = data.stats[1].base_stat;
+  defenceEl.textContent = data.stats[2].base_stat;
+  spAttackEl.textContent = data.stats[3].base_stat;
+  spDefenceEl.textContent = data.stats[4].base_stat;
+  speedEl.textContent = data.stats[5].base_stat;
+
+  spriteContainer.innerHTML = "";
+  const img = document.createElement("img");
+  img.id = "sprite";
+  img.src = data.sprites.front_default;
+  img.alt = `${data.name} image`;
+  spriteContainer.appendChild(img);
+
+  typesEl.innerHTML = "";
+  data.types.forEach((typeInfo) => {
+    const typeSpan = document.createElement("span");
+    typeSpan.textContent = typeInfo.type.name.toUpperCase();
+    typesEl.appendChild(typeSpan);
+  })
+}
+
+
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const pokemon = input.value.trim().toLowerCase();
+  if (pokemon === "red"){
+    alert("Pokémon not found");
+    return;
+  }
+  fetchPokemon(pokemon)
+  
+})
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #205781;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+  text-align: center;
+}
+.container{
+  margin-top: 1.2rem;
+  background-color: #F6F8D5;
+  border-radius: 8px;
+  width: 325px;
+  height: 500px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.search-input-label{
+  font-size: 16px;
+  text-align: center;
+}
+.input-inner-container{
+  margin-top: 10px;
+}
+#search-input{
+  width: 12rem;
+  height: 2rem;
+  padding-left: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+#search-btn{
+  padding: 7px 10px;
+  color: white;
+  background-color: #4F959D;
+  border-radius: 15px;
+  border: none;
+  transition: 0.3s;
+}
+#search-btn:hover{
+  background-color: #98D2C0;
+  cursor: pointer;
+}
+.output-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 72vh;
+}
+.top-container{
+  width: 300px;
+  height: 250px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.name-and-id{
+  height: 28px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  padding: 3px 0px 0px 4px;
+  margin-bottom: 5px;
+}
+.size{
+  height: 22px;
+  padding: 3px 4px;
+  font-size: 0.85rem;
+}
+.sprite-container{
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9.5rem;
+}
+.types{
+  padding: 3px 4px;
+  min-height: 30px;display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.types>span{
+  border-radius: 5px;
+  background-color: #98D2C0;
+  font-size: 12px;
+  font-style: none;
+  text-align: center;
+  padding: 3px 4px;
+}
+.bottom-container{
+  margin-top: 5px;
+  width: 290px;
+  height: 250px;
+}
+table{
+  background-color: #4F959D;
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+th, td{
+  text-align: center;
+  border: 5px solid #F6F8D5;
+  padding: 4px ;
+}
+
+** end of undefined **
+
